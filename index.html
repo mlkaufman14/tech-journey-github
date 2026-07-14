@@ -105,12 +105,35 @@
         and this page is my first colorful step into the world of web creation.
       </p>
 
+      <div x-data="{ mood: 'sunny', spark: 0, vibes: { sunny: { icon: '☀️', title: 'Sunny mood', blurb: 'I’m ready for bright ideas and big plans.' }, adventure: { icon: '🚲', title: 'Adventure mood', blurb: 'Let’s ride into the next great story.' }, explorer: { icon: '🧭', title: 'Explorer mood', blurb: 'I’m chasing new places and fresh experiences.' } } }" class="mt-8 rounded-3xl border border-cyan-200 bg-white/80 p-5 shadow-inner">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-600">
+          Pick my vibe
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <button @click="mood = 'sunny'; spark += 1" :class="mood === 'sunny' ? 'bg-cyan-500 text-white' : 'bg-cyan-50 text-cyan-700'" class="rounded-full px-3 py-2 text-sm font-semibold transition">
+            ☀️ Sunny
+          </button>
+          <button @click="mood = 'adventure'; spark += 1" :class="mood === 'adventure' ? 'bg-fuchsia-500 text-white' : 'bg-fuchsia-50 text-fuchsia-700'" class="rounded-full px-3 py-2 text-sm font-semibold transition">
+            🚲 Adventure
+          </button>
+          <button @click="mood = 'explorer'; spark += 1" :class="mood === 'explorer' ? 'bg-amber-500 text-white' : 'bg-amber-50 text-amber-700'" class="rounded-full px-3 py-2 text-sm font-semibold transition">
+            🧭 Explorer
+          </button>
+        </div>
+        <div class="mt-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-fuchsia-500 p-4 text-white">
+          <div class="text-4xl" x-text="vibes[mood].icon"></div>
+          <h3 class="mt-2 text-lg font-semibold" x-text="vibes[mood].title"></h3>
+          <p class="mt-1 text-sm text-white/90" x-text="vibes[mood].blurb"></p>
+          <p class="mt-3 text-sm font-medium" x-text="'Spark level: ' + spark"></p>
+        </div>
+      </div>
+
       <!--
         A little interactive button, powered by Alpine.js.
         x-data gives this box a tiny bit of "memory" (waves),
         @click runs code when clicked, and x-text shows a value.
       -->
-      <div x-data="{ waves: 0 }" class="mt-8">
+      <div x-data="{ waves: 0 }" class="mt-6">
         <button
           @click="waves++"
           class="rounded-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 px-5 py-2 font-semibold text-white shadow-lg transition hover:from-cyan-600 hover:to-fuchsia-600"
