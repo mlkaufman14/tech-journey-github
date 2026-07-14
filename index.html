@@ -24,7 +24,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- The title that shows in the browser tab. Change it! -->
-    <title>My Showcase Page</title>
+    <title>My Vibrant Adventure Page</title>
 
     <!-- ===== Toolkits loaded for you — Copilot knows all of these ===== -->
 
@@ -62,41 +62,47 @@
 
   <!-- The classes below set the gradient background and center the card. -->
   <body
-    class="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 flex justify-center items-start p-4"
+    class="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(56,189,248,0.45),_transparent_35%),linear-gradient(135deg,_#7c3aed_0%,_#ec4899_45%,_#f59e0b_100%)] flex justify-center items-start p-4 text-slate-800"
   >
-    <main class="bg-white w-full max-w-2xl my-12 p-10 rounded-2xl shadow-2xl">
+    <main class="w-full max-w-2xl my-12 p-10 rounded-[2rem] shadow-2xl border border-white/60 bg-gradient-to-br from-white via-sky-50 to-amber-50">
       <!-- ▼▼▼ START EDITING HERE ▼▼▼ -->
 
-      <h1 class="text-4xl font-extrabold text-gray-900">
-        Hi, I'm [Your Name] <span class="inline-block">👋</span>
+      <div class="inline-block rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-700">
+        Adventure • Energy • Curiosity
+      </div>
+
+      <h1 class="mt-4 text-4xl font-extrabold text-slate-900 sm:text-5xl">
+        Hi, I’m an energetic explorer <span class="inline-block">🌞</span>
       </h1>
-      <p class="text-lg text-gray-500 mt-1">
-        A future developer learning Git, GitHub, and Copilot.
+      <p class="mt-3 text-lg text-slate-600">
+        I’m all about sunny days, fast moves, and discovering new places.
       </p>
 
-      <h2 class="text-2xl font-semibold mt-8 pb-1 border-b-4 border-purple-400">
+      <h2 class="mt-8 border-b-4 border-fuchsia-400 pb-1 text-2xl font-semibold text-slate-900">
         About Me
       </h2>
-      <p class="mt-3 text-gray-700">
-        Write a sentence or two about yourself here. What school do you go to?
-        What got you interested in tech?
+      <p class="mt-3 text-slate-700">
+        I love bringing big energy to everything I do — whether it’s a tennis
+        match, a long bike ride, or a weekend adventure outside. I’m the kind
+        of person who is always looking for the next exciting experience.
       </p>
 
-      <h2 class="text-2xl font-semibold mt-8 pb-1 border-b-4 border-purple-400">
-        Things I'm Into
+      <h2 class="mt-8 border-b-4 border-cyan-400 pb-1 text-2xl font-semibold text-slate-900">
+        Things I’m Into
       </h2>
-      <ul class="mt-3 space-y-1 text-gray-700 list-disc list-inside">
-        <li>Change these to your own interests</li>
-        <li>Video games, art, sports, music — anything!</li>
-        <li>Add or remove list items as you like</li>
+      <ul class="mt-3 space-y-2 text-slate-700">
+        <li class="flex items-center gap-2"><i class="fa-solid fa-table-tennis-paddle-ball text-cyan-500"></i> Tennis — chasing the next great rally</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-bicycle text-fuchsia-500"></i> Biking — feeling the wind and freedom</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-tree text-emerald-500"></i> Being outdoors — soaking up fresh air and sunshine</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-plane text-amber-500"></i> Traveling — collecting stories, views, and memories</li>
       </ul>
 
-      <h2 class="text-2xl font-semibold mt-8 pb-1 border-b-4 border-purple-400">
-        What I'm Learning
+      <h2 class="mt-8 border-b-4 border-amber-400 pb-1 text-2xl font-semibold text-slate-900">
+        What I’m Learning
       </h2>
-      <p class="mt-3 text-gray-700">
-        Right now I'm learning how developers build and share software with
-        GitHub. This page is proof — I wrote it and published it myself!
+      <p class="mt-3 text-slate-700">
+        Right now I’m learning how to build and share awesome things with GitHub,
+        and this page is my first colorful step into the world of web creation.
       </p>
 
       <!--
@@ -107,19 +113,19 @@
       <div x-data="{ waves: 0 }" class="mt-8">
         <button
           @click="waves++"
-          class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2 rounded-lg shadow transition"
+          class="rounded-full bg-gradient-to-r from-cyan-500 to-fuchsia-500 px-5 py-2 font-semibold text-white shadow-lg transition hover:from-cyan-600 hover:to-fuchsia-600"
         >
           <i class="fa-solid fa-hand"></i> Wave at me
         </button>
-        <span x-show="waves > 0" class="ml-3 text-gray-600">
+        <span x-show="waves > 0" class="ml-3 text-slate-600">
           Thanks for the <span x-text="waves"></span> wave(s)! 👋
         </span>
       </div>
 
       <!-- ▲▲▲ STOP EDITING HERE (or keep going — it's your page!) ▲▲▲ -->
 
-      <footer class="mt-10 text-center text-sm text-gray-400">
-        Built with <i class="fa-solid fa-heart text-purple-400"></i> during the
+      <footer class="mt-10 text-center text-sm text-slate-400">
+        Built with <i class="fa-solid fa-heart text-fuchsia-400"></i> during the
         Tech Journey course.
       </footer>
     </main>
